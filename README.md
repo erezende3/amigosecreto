@@ -1,8 +1,6 @@
-# Chalenge Amigo Secreto
- # Amigo Secreto 🎉
+# Chalenge Amigo Secreto🎉
 
-![Capa do Projeto](assets/amigo-secreto-banner.png)
-
+Por: Edson Rezende Souza 
 ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen) ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-blue)
 
 ---
