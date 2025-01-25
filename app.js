@@ -1,9 +1,9 @@
-// Seleção de elementos HTML
 const amigoInput = document.getElementById("amigo");
 const listaAmigos = document.getElementById("listaAmigos");
 const resultado = document.getElementById("resultado");
 
 let amigos = [];
+let listaResetada = false; // Indicador para saber se a lista foi resetada
 
 // Função para adicionar nomes na lista
 function adicionarAmigo() {
@@ -12,6 +12,12 @@ function adicionarAmigo() {
     if (nome === "") {
         alert("Por favor, insira o nome de seu amigo(a).");
         return;
+    }
+
+    // Se a lista foi resetada, limpar a mensagem de reset
+    if (listaResetada) {
+        resultado.innerHTML = ""; // Apaga o texto de reset
+        listaResetada = false; // Resetar o indicador
     }
 
     amigos.push(nome);
@@ -56,9 +62,10 @@ function sortearAmigo() {
             amigos = [];
             listaAmigos.innerHTML = "";
             resultado.innerHTML = "<li><strong>Lista resetada. Adicione novos amigos!</strong></li>";
+            listaResetada = true; // Marcar que a lista foi resetada
         } else if (resposta === "n") {
             // Manter a lista e exibir mensagem
-            resultado.innerHTML += `<li><strong>Ok, boa diversão!</strong></li>`;
+            resultado.innerHTML += `<li><strong>Boa diversão!!!</strong></li>`;
         } else {
             // Resposta inválida
             alert("Opção inválida. Digite apenas S ou N.");
